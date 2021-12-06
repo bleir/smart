@@ -1,38 +1,89 @@
 .App {
   text-align: center;
+  line-height: 26px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.content > div {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+.instructions {
+  list-style-type: decimal;
+  text-align: left;
+}
+
+.logContainer {
+  list-style: none;
+  height: 500px;
+  border: 1px solid #eaeaea;
+  overflow-y: auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.logContainer__element {
+  margin-bottom: 5px;
+}
+
+.tableSummary {
+  height: 470px;
+  overflow-y: auto;
+  display: block;
+}
+
+.dataInTable > table {
+  padding: 0;
+}
+
+.tableSummary,
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+.tableSummary .siteAddress {
+  text-align: left;
+}
+
+.tableSummary tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.tableSummary > tbody > tr:hover {
+  background-color: #ddd;
+}
+.tableSummary th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04aa6d;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.tableSummaryData {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tableSummaryData td {
+  border: none;
+}
+
+.btn {
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  padding: 10px;
+  background: #eaeaea;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: default;
 }
